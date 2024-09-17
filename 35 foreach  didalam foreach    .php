@@ -1,10 +1,23 @@
 <?php
-$bulan = array (1=>'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember');
+// membuat array 2 dimensi yang berisi array asosiatif
+$artikel = [
+    [
+        "judul" => "Belajar PHP & MySQL untuk Pemula",
+        "penulis" => "ahmadimuslim"
+    ],
+    [
+        "judul" => "Tutorial PHP dari Nol hingga Mahir",
+        "penulis" => "ahmadimuslim"
+    ],
+    [
+        "judul" => "Membuat Aplikasi Web dengan PHP",
+        "penulis" => "ahmadimuslim"
+    ]
+];	
 
-$opsi_bulan = '<select name="bulan">';
-foreach ($bulan as $key => $value) {
-	$opsi_bulan .= '<option value="' . $key . '">' . $value . '</option>' . "\r\n";
+// menampilkan array
+foreach($artikel as $post){
+    echo "<h2>".$post["judul"]."</h2>";
+    echo "<p>".$post["penulis"]."<p>";
+    echo "<hr>";
 }
-$opsi_bulan .= '</select>';
-
-echo $opsi_bulan;
